@@ -8,4 +8,6 @@ data class AddressEntity(
     val state: String
 ) {
     constructor(address: Address) : this(address.street, address.city, address.state)
+
+    fun toAddress() = Address(street, city, state)
 }
