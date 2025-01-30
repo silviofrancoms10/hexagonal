@@ -21,11 +21,7 @@ class CustomarController(
     @ResponseStatus(HttpStatus.CREATED)
     fun insert(@Valid @RequestBody customerRequest: CustomerRequest){
         with(customerRequest){
-        val customer = Customer(
-            name = name, cpf = cpf,
-            id = null,
-            address = null
-        )
+        val customer = Customer(name = name, cpf = cpf)
         insertCustomerInputPort.insert(customer, customerRequest.zipCode)
         }
     }
