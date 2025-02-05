@@ -5,7 +5,7 @@ import com.silviofrancoms.hexagonal.application.ports.out.DeleteCustomerByIdOutp
 import org.springframework.stereotype.Component
 
 @Component
-class DeleteCustomerByIdByIdAdapter(
+class DeleteCustomerByIdAdapter(
     private val customerRepository: CustomerRepository
 ) : DeleteCustomerByIdOutputPort {
 
