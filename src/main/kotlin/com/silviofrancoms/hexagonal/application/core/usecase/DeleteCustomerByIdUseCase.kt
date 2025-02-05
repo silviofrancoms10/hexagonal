@@ -1,15 +1,15 @@
 package com.silviofrancoms.hexagonal.application.core.usecase
 
 import com.silviofrancoms.hexagonal.application.ports.`in`.FindCustomerByIdInputPort
-import com.silviofrancoms.hexagonal.application.ports.out.DeleteCustomerOutputPort
+import com.silviofrancoms.hexagonal.application.ports.out.DeleteCustomerByIdOutputPort
 
 class DeleteCustomerByIdUseCase(
     private val findCustomerByIdInputPort: FindCustomerByIdInputPort,
-    private val deleteCustomerOutputPort: DeleteCustomerOutputPort
+    private val deleteCustomerByIdOutputPort: DeleteCustomerByIdOutputPort
 ) {
 
     fun delete(id: String) {
         findCustomerByIdInputPort.find(id)
-        deleteCustomerOutputPort.delete(id)
+        deleteCustomerByIdOutputPort.delete(id)
     }
 }
