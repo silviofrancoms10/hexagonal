@@ -1,4 +1,4 @@
-package com.silviofrancoms.hexagonal.adapters
+package com.silviofrancoms.hexagonal.adapters.out
 
 import com.silviofrancoms.hexagonal.adapters.out.repository.CustomerRepository
 import com.silviofrancoms.hexagonal.adapters.out.repository.entity.CustomerEntity
