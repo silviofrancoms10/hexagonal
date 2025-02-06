@@ -1,6 +1,7 @@
 package com.silviofrancoms.hexagonal.config
 
 import com.silviofrancoms.hexagonal.adapters.out.FindAddressByZipCodeAdapter
+import com.silviofrancoms.hexagonal.adapters.out.SendCpfForValidationAdapter
 import com.silviofrancoms.hexagonal.adapters.out.UpdateCustomerAdapter
 import com.silviofrancoms.hexagonal.application.core.usecase.FindCustomerByIdUseCase
 import com.silviofrancoms.hexagonal.application.core.usecase.UpdateCustomerUseCase
@@ -15,10 +16,12 @@ class UpdateCustomerConfig {
     fun updateCustomer(
         findCustomerByIdUseCase: FindCustomerByIdUseCase,
         findAddressByZipCodeAdapter: FindAddressByZipCodeAdapter,
-        updateCustomerAdapter: UpdateCustomerAdapter
+        updateCustomerAdapter: UpdateCustomerAdapter,
+        sendCpfForValidationAdapter: SendCpfForValidationAdapter
     ): UpdateCustomerInputPort = UpdateCustomerUseCase(
         findCustomerByIdUseCase,
         findAddressByZipCodeAdapter,
-        updateCustomerAdapter
+        updateCustomerAdapter,
+        sendCpfForValidationAdapter
     )
 }
