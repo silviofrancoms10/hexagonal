@@ -18,7 +18,7 @@ class UpdateCustomerConfig {
         findAddressByZipCodeAdapter: FindAddressByZipCodeAdapter,
         updateCustomerAdapter: UpdateCustomerAdapter,
         sendCpfForValidationAdapter: SendCpfForValidationAdapter
-    ): UpdateCustomerInputPort = UpdateCustomerUseCase(
+    ) = UpdateCustomerUseCase(
         findCustomerByIdUseCase,
         findAddressByZipCodeAdapter,
         updateCustomerAdapter,
